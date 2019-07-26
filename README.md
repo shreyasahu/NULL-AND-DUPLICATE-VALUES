@@ -54,3 +54,9 @@ FOR DROPPING COLUMN
 
     df.drop(['Months since last delinquent'],axis=1,inplace=True)
     
+FOR REPLACING VALUES NULL VALUES BY MEAN OR MODE
+    
+    df[df['Bankruptcies'].isnull()==True]=df[df['Bankruptcies'].isnull()==True].fillna(df['Number of Credit Problems'].mean())
+    
+    df[df['Tax Liens'].isnull()==True]=df[df['Tax Liens'].isnull()==True].fillna(df['Number of Credit Problems'].mode())
+    
