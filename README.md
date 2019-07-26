@@ -29,6 +29,9 @@ DF AND NULLD IS THE DATAFRAME
     
     df[df['BsmtQual'].isnull()==True]
     
+    df=df.drop_duplicates()  # dropping duplicate rows
+    df.shape
+    
  FOR FILLING NULL VALUES WITH NO BASEMENT
     
     df["BsmtExposure"].fillna("No Basement", inplace = True) 
@@ -47,4 +50,7 @@ RemoveS rows which had null values in all columns
 
     df[df['Loan ID'].isnull()==True]
 
+FOR DROPPING COLUMN
+
+    df.drop(['Months since last delinquent'],axis=1,inplace=True)
     
