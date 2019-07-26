@@ -32,6 +32,10 @@ DF AND NULLD IS THE DATAFRAME
  FOR FILLING NULL VALUES WITH NO BASEMENT
     
     df["BsmtExposure"].fillna("No Basement", inplace = True) 
+  
+  FOR FILLING -1 VALUE WITH NAN VALUES
+  
+    df.replace(-1,np.nan,inplace=True)    
     
  FOR SEEING COLUMNS WHICH HAVE DATATYPE OBJECT
     
