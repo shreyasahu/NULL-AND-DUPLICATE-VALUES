@@ -39,5 +39,8 @@ DF AND NULLD IS THE DATAFRAME
     col.info()
     #col
     
+RemoveS rows which had null values in all columns  
+
+    df[df['Loan ID'].isnull()==True]
 
     
